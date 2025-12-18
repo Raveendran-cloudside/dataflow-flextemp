@@ -1,0 +1,54 @@
+{
+ "name": "PubSub to CloudSQL + BigQuery Pipeline",
+ "description": "Streaming pipeline from Pub/Sub to Cloud SQL + BigQuery with DLQ.",
+ "parameters": [
+   {
+     "name": "input_subscription",
+     "label": "Input Pub/Sub Subscription",
+     "helpText": "projects/<project>/subscriptions/<sub>",
+     "paramType": "TEXT"
+   },
+   {
+     "name": "dlq_topic",
+     "label": "DLQ PubSub topic",
+     "helpText": "projects/<project>/topics/<dlq>",
+     "paramType": "TEXT"
+   },
+   {
+     "name": "instance_connection_name",
+     "label": "Cloud SQL Instance Connection Name",
+     "helpText": "project.region:instance",
+     "paramType": "TEXT"
+   },
+   {
+     "name": "db_user",
+     "label": "Database User",
+     "helpText": "user",
+     "paramType": "TEXT"
+   },
+   {
+     "name": "db_pass",
+     "label": "Database Password",
+     "helpText": "password",
+     "paramType": "TEXT"
+   },
+   {
+     "name": "db_name",
+     "label": "Database Name",
+     "helpText": "database",
+     "paramType": "TEXT"
+   },
+   {
+     "name": "bq_table",
+     "label": "BigQuery Table",
+     "helpText": "project.dataset.table",
+     "paramType": "TEXT"
+   },
+   {
+     "name": "postgres_table",
+     "label": "Postgres Table",
+     "helpText": "table",
+     "paramType": "TEXT"
+   }
+ ]
+}
